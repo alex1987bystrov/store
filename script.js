@@ -37,10 +37,11 @@ $(function(){
         for(var i=0; i < items.length; i++){
             var clone = template.content.cloneNode(true);
             section.appendChild(clone);
-            $("#0").attr({"id" : "1", "src" : items[i].img});
-            $("#a").attr("id", "a1").text(items[i].name);
-            $("#b").attr("id", "b1").text(items[i].description);
-            $("#c").attr("id", "c1").text("$ " + items[i].price);
+            $("#0").attr({"id" : i+1, "src" : items[i].img});
+            $("#a").attr("id", "n"+(i+1)).text(items[i].name);
+            $("#b").attr("id", "d"+(i+1)).text(items[i].description);
+            $("#c").attr("id", "p"+(i+1)).text("$ " + items[i].price);
         }
     }else{}
 });
+
