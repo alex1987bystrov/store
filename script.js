@@ -37,7 +37,7 @@ $(function(){
         for(var i=0; i < items.length; i++){
             var clone = template.content.cloneNode(true);
             section.appendChild(clone);
-            $("#0").attr({"id" : i+1, "src" : items[i].img});
+            $("#0").attr({"id" : "i"+(i+1), "src" : items[i].img});
             $("#a").attr("id", "n"+(i+1)).text(items[i].name);
             $("#b").attr("id", "d"+(i+1)).text(items[i].description);
             $("#c").attr("id", "p"+(i+1)).text("$ " + items[i].price);
