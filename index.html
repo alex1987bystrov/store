@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html class="html">
     <head>
+        <title>Main</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
         <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+        <script src="jquery-3.7.1.min.js"></script>
     </head>
     <body class="body">
         <header class="header">
                 <div class="header__container">
                     <div class="hat">
-                        <nav class="nav__panel">
+                        <nav class="nav__panel" id="nav">
                             <ul class="nav__panel__list">
                                 <li>
-                                    <a class="link home" href="">Home</a>
+                                    <a class="link home" href="index.html">Home</a>
                                 </li>
                                 <li>
                                     <a class="link about" href="">About</a>
@@ -28,7 +30,7 @@
                         </nav>
                     </div>
                     <div class="logo"></div>
-                    <button class="burger">
+                    <button class="burger" id="burg">
                         <span class="burger__item">Menu</span>
                     </button>
                     <div class="header__center">
@@ -47,69 +49,20 @@
                     <a class="go__top" href=""><button class="return__btn" type="image-button"></button></a>
                 </div>
                 <section class="section">
-                    <div class="section__item">
-                        <div class="section__item__top">
-                            <img class="section__item__image" src="images/1.jpg">
-                        </div>
-                        <div class="section__item__bottom">
-                            <div class="section__item__bottom__description">Szhdjfxshsrjkdfgadffffffffffffffffffffhfddddddddghsajkryjiws shgs asthrjryj htajsjsjdg gggggggg ggggggsaaaaaaaaaaaaaggggdhg</div>
-                            <div class="section__item__bottom__price">10500</div>
-                        </div>
-                    </div>
-                    <div class="section__item">
-                        <div class="section__item__top">
-                            <img class="section__item__image" src="images/2.jpg">
-                        </div>
-                        <div class="section__item__bottom">
-                            <div class="section__item__bottom__description">Szhdjfxhg</div>
-                            <div class="section__item__bottom__price">10500</div>
-                        </div>
-                    </div>
-                    <div class="section__item">
-                        <div class="section__item__top">
-                            <img class="section__item__image" src="images/3.jpg">
-                        </div>
-                        <div class="section__item__bottom">
-                            <div class="section__item__bottom__description">Szhdjfxhg</div>
-                            <div class="section__item__bottom__price">10500</div>
-                        </div>
-                    </div>
-                    <div class="section__item">
-                        <div class="section__item__top">
-                            <img class="section__item__image" src="images/4.jpg">
-                        </div>
-                        <div class="section__item__bottom">
-                            <div class="section__item__bottom__description">Szhdjfxhg</div>
-                            <div class="section__item__bottom__price">10500</div>
-                        </div>
-                    </div>
-                    <div class="section__item">
-                        <div class="section__item__top">
-                            <img class="section__item__image" src="images/5.jpg">
-                        </div>
-                        <div class="section__item__bottom">
-                            <div class="section__item__bottom__description">Szhdjfxhg</div>
-                            <div class="section__item__bottom__price">10500</div>
-                        </div>
-                    </div>
-                    <div class="section__item">
-                        <div class="section__item__top">
-                            <img class="section__item__image" src="images/6.jpg">
-                        </div>
-                        <div class="section__item__bottom">
-                            <div class="section__item__bottom__description">Szhdjfxhg</div>
-                            <div class="section__item__bottom__price">10500</div>
-                        </div>
-                    </div>
-                    <div class="section__item">
-                        <div class="section__item__top">
-                            <img class="section__item__image" src="images/1.jpg">
-                        </div>
-                        <div class="section__item__bottom">
-                            <div class="section__item__bottom__description">Szhdjfxhg</div>
-                            <div class="section__item__bottom__price">10500</div>
-                        </div>
-                    </div>
+                    <template class="template__items">
+                        <a class="detail__link" href="details.html">
+                            <div class="section__item">
+                                <div class="section__item__top">
+                                    <img class="section__item__image" id="0" src="">
+                                </div>
+                                <div class="section__item__bottom">
+                                    <div class="section__item__bottom__name" id="a"></div>
+                                    <div class="section__item__bottom__description" id="b"></div>
+                                    <div class="section__item__bottom__price" id="c"></div>
+                                </div>
+                            </div>    
+                        </a>
+                    </template>
                 </section>
         </main>
         <footer class="footer">
