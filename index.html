@@ -9,61 +9,63 @@
         <script src="jquery-3.7.1.min.js"></script>
     </head>
     <body class="body">
-        <header class="header">
-                <div class="header__container">
-                    <div class="hat">
-                        <nav class="nav__panel" id="nav">
-                            <ul class="nav__panel__list">
-                                <li>
-                                    <a class="link home" href="index.html">Home</a>
-                                </li>
-                                <li>
-                                    <a class="link about" href="">About</a>
-                                </li>
-                                <li>
-                                    <a class="link contact" href="">Contact</a>
-                                </li>
-                                <li>
-                                   <a class="link basket" href="">&#x1F6D2</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="logo"></div>
-                    <button class="burger" id="burg">
-                        <span class="burger__item">Menu</span>
-                    </button>
-                    <div class="header__center">
-                        <form class="search__form">
-                            <input type="search" class="search">
-                            <input type="submit" class="submit" value="&#128269">    
-                        </form>
-                    </div>
+        <header class="header" id="head">
+            <div class="header__container">
+                <div class="hat">
+                    <nav class="nav__panel" id="nav">
+                        <ul class="nav__panel__list">
+                            <li>
+                                <a class="link home" href="index.html">Home</a>
+                            </li>
+                            <li>
+                                <a class="link about" href="">About</a>
+                            </li>
+                            <li>
+                                <a class="link contact" href="">Contact</a>
+                            </li>
+                            <li>
+                               <a class="link basket" href="">&#x1F6D2</a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
+                <div class="logo"></div>
+                <button class="burger" id="burg">
+                    <span class="burger__item">Menu</span>
+                </button>
+                <div class="header__center">
+                    <form class="search__form">
+                        <input type="search" class="search" id="search">
+                        <input type="button" class="button" value="&#128269">    
+                    </form>
+                </div>
+            </div>
+            <script>$(function(){search();});</script>
         </header>
         <main class="main">
-                <div class="main__top">
-                    <h1 class="title">welcome to our site</h1>
-                </div>
-                <div class="return">
-                    <a class="go__top" href=""><button class="return__btn" type="image-button"></button></a>
-                </div>
-                <section class="section">
-                    <template class="template__items">
-                        <a class="detail__link" href="details.html">
-                            <div class="section__item">
-                                <div class="section__item__top">
-                                    <img class="section__item__image" id="0" src="">
-                                </div>
-                                <div class="section__item__bottom">
-                                    <div class="section__item__bottom__name" id="a"></div>
-                                    <div class="section__item__bottom__description" id="b"></div>
-                                    <div class="section__item__bottom__price" id="c"></div>
-                                </div>
-                            </div>    
-                        </a>
-                    </template>
-                </section>
+            <div class="main__top">
+                <h1 class="title">welcome to our site</h1>
+            </div>
+            <div class="return">
+                <a class="go__top" href="#head"><button class="return__btn" type="image-button"></button></a>
+            </div>
+            <section class="section">
+                <template class="template__items">
+                    <a class="detail__link" href="details.html">
+                        <div class="section__item" id="item">
+                            <div class="section__item__top">
+                                <img class="section__item__image" id="0" src="">
+                            </div>
+                            <div class="section__item__bottom">
+                                <div class="section__item__bottom__name" id="a"></div>
+                                <div class="section__item__bottom__description" id="b"></div>
+                                <div class="section__item__bottom__price" id="c"></div>
+                            </div>
+                        </div>    
+                    </a>
+                </template>
+                <script>$(function(){createItems();});</script>
+            </section>
         </main>
         <footer class="footer">
             <section class="footer__section">
