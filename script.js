@@ -29,24 +29,12 @@ let items = data;         //сюда парсить базы данных вме
 
 // WITH JQUERY.
 
-$(function(){
+function burger(){
     $("#burg").click(function(){
         $(this).toggleClass("active");
         $("#nav").toggleClass("show");
     });
-    
-    $(".section__item").click(function(){
-        var itemId = this.id;                                 //получаем id объекта
-        var itemById = data.filter(el => el.id == itemId);//создаем массив с объектом по id
-        localStorage.setItem("imgById", itemById[0].img); //записываем элемент объекта в контейнер для передачи через 'local storage'
-    });
-    $("#imgD").attr("src", localStorage.getItem("imgById"));//берем из 'local storage' и записываем в атрибут 'src' html-элемента
-    localStorage.removeItem("imgById");                     //чистим контейнер в 'local storage'
-    localStorage.clear();                                   //чистим 'local storage'
-
-});
-
-
+}
 function createItems(){                                     //автозаполнение сетки элементами из массива
     if ("content" in document.createElement("template")) {
     var section = document.querySelector(".section");
@@ -79,4 +67,15 @@ function search(){                                            //поиск по 
         }
     });
     $(".button").click(function(){changeData();});             //поиск по нажатию кнопки поиска
+}
+function getImgId(){
+    $(".section__item").click(function(){
+        var itemById = data.filter(el => el.id === this.id);    //получаем id объекта создаем массив с объектом по id
+        localStorage.setItem("imgById", itemById[0].img);       //записываем элемент объекта в контейнер для передачи через 'local storage'
+    });
+}
+function setImgById(){
+    setTimeout(() =>$("#imgD").attr("src", localStorage.getItem("imgById")), 30);  //берем из 'local storage' и записываем в атрибут 'src' html-элемента
+    // localStorage.removeItem("imgById");                     //чистим контейнер в 'local storage'
+    // localStorage.clear();                                   //чистим 'local storage'
 }
